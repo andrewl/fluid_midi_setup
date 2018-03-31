@@ -1,7 +1,7 @@
 #!/bin/bash
 
 echo "Starting fluidsynth"
-fluidsynth -s -i -a pulseaudio -g 2 /usr/share/sounds/sf2/FluidR3_GM.sf2 &
+fluidsynth -si -p "fluid" -C0 -R0 -r48000 -d  -a alsa -m alsa_seq /usr/share/sounds/sf2/FluidR3_GM.sf2 &
 
 echo "Waiting for fluidsynth to startup"
 sleep 10
